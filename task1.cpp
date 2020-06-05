@@ -4,26 +4,18 @@
 
 using namespace std;
 
-int sorting(int data[], int size);
-
 main(){
 	int jumlah, min, temp;
 	cout<<"Task 1\n\n\n";
 	cout<<"Masukan jumlah data : ";
 	cin>>jumlah;
+	
+	cout<<"\n\n";
 	int data[jumlah];
-	
-	
 	for(int i=1; i<=jumlah; i++){
 		cout<<"Masukan data ke-"<<i<<" : ";
 		cin>>data[i-1];
 	}
-	cout<<"\n\n";
-	for(int i=0; i<jumlah; i++){
-		cout<<data[i]<<" ";
-	}
-	
-	cout<<"\n\n";
 	
 	for(int i=jumlah-1; i>=0; i--){
 		min = i; 
@@ -37,9 +29,6 @@ main(){
 		data[i] = temp;
 	}
 	
-	for(int i=0; i<jumlah; i++){
-		cout<<data[i]<<" ";
-	}
 	cout<<"\n";
 	cout<<"Data terbesar kedua adalah : "<<data[1]<<"\n\n\n";
 	system("pause");
